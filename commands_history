@@ -1,0 +1,72 @@
+2001  terragrunt init
+ 2002  code terragrunt.hcl
+ 2003  terragrunt init
+ 2004  ls
+ 2005  pwd
+ 2006  ll
+ 2007  ls .terraform
+ 2008  cat .terraform/terraform.tfstate 
+ 2009  cat /home/hermann90/interview/terragrunt/terraform.tfstate
+ 2010  ll
+ 2011  helm 
+ 2012  helm version
+ 2013  code helm_deploy_configmap_service.yaml
+ 2014  code README.md
+ 2015  helm create app1
+ 2016  ls
+ 2017  code values.yaml
+ 2018  rm -rf app1/
+ 2019  code secret.yaml
+ 2020  sops
+ 2021  ls
+ 2022  code another_secret_file.yaml
+ 2023  sops -e -i secret.yaml 
+ 2024  sops -e -i another_secret_file.yaml 
+ 2025  ls
+ 2026  sops -e  another_secret_file.yaml 
+ 2027  sops another_secret_file.yaml 
+ 2028  code  another_secret_file.yaml 
+ 2029  sops -version
+ 2030  sops -e secret.yaml > hello.enc.yaml
+ 2031  rm -r hello.enc.yaml 
+ 2032  sops help
+ 2033  sops -e -i another_secret_file.yaml 
+ 2034  code mysecret.yml
+ 2035  sops -e -i mysecret.yml 
+ 2036  export KEY_NAME="Hermann90"
+ 2037  export KEY_COMMENT="test key for sops"
+ 2038  gpg --batch --full-generate-key <<EOF
+%no-protection
+Key-Type: 1
+Key-Length: 4096
+Subkey-Type: 1
+Subkey-Length: 4096
+Expire-Date: 0
+Name-Comment: ${KEY_COMMENT}
+Name-Real: ${KEY_NAME}
+EOF
+
+ 2039  gpg --list-keys
+ 2040  gpg --list-secret-keys "${KEY_NAME}"
+ 2041  sops -e -i mysecret.yml 
+ 2042  ls
+ 2043  rm -r mysecret.yml 
+ 2044  ll
+ 2045  code mysecret.yml
+ 2046  sops -e -i mysecret.yml 
+ 2047  sops -d mysecret.yml 
+ 2048  sops -d -i mysecret.yml 
+ 2049  sops -e -i mysecret.yml 
+ 2050  sops -e -i secret.yaml 
+ 2051  code k8s_use_encrypted_sops_file.yaml
+ 2052  sudo apt-get update && sudo apt-get -y install golang-go 
+ 2053  go
+ 2054  ls
+ 2055  go mod init job-interview-yemi
+ 2056  ls
+ 2057  cat go.mod 
+ 2058  go get github.com/gruntwork-io/terratest/modules/terraform
+ 2059  ls
+ 2060  ll
+ 2061  go get github.com/stretchr/testify/assert
+ 2062  history

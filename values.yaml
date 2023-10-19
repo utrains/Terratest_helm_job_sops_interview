@@ -1,0 +1,5 @@
+replicaCount: 1
+
+image:
+  repository: "your_own_or_public_image_repo"
+  tag: "some_tag"

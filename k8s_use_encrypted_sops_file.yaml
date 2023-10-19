@@ -1,0 +1,8 @@
+---
+env: 
+  -name: "api_key"
+    valueFrom:
+      secretKeyRef:
+        name: your-secret-name
+        key: api_key 
+---

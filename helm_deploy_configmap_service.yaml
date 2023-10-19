@@ -1,0 +1,66 @@
+# 2.a°)
+# Deployment structure
+apiVersion: apps/v1
+kind: Deployment
+# ... somethings
+
+---
+#Service Structure
+apiVersion: v1
+kind: Service
+
+# ... somethings
+---
+#ConfigMap Structure
+apiVersion: v1
+kind: ConfigMap
+
+# ... somethings
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: interview-service
+spec:
+  selector:
+    app: interview
+  ports:
+    - protocol: TCP
+      targetPort: 5000
+      port: 5000
+  type: LoadBalancer
+
+---
+apiVersion: v1 
+kind: ConfigMap
+metadata:
+  name: interview-configmap
+data:
+  key: value
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: nginx
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: <Port>
+
