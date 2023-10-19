@@ -70,3 +70,54 @@ EOF
  2060  ll
  2061  go get github.com/stretchr/testify/assert
  2062  history
+ 2063  code commands_history
+ 2064  code terraform_test.go
+ 2065  pwd
+ 2066  terraform output
+ 2067  go test -v -run TestLocalDirectoryCreation
+ 2068  terraform init
+ 2069  terraform apply
+ 2070  terraform init
+ 2071  terraform apply
+ 2072  terraform init
+ 2073  terraform apply
+ 2074  terraform apply --auto-approve
+ 2075  terraform output
+ 2076  terraform destroy --auto-approve
+ 2077  ls
+ 2078  terraform output
+ 2079  go test -v -run TestLocalDirectoryCreation
+ 2080  go test -v -run TestLocalDirectoryCreationA
+ 2081  go test -v -run terraform_test.go
+ 2082  go test -v -run .
+ 2083  ls ~/.kube/
+ 2084  cat  ~/.kube/config 
+ 2085  code hello_world_deploy.yaml
+ 2086  go test -v -run TestKubernetesHelloWorldExample
+ 2087  go get github.com/gruntwork-io/terratest/modules/aws@v0.46.1
+ 2088  go test -v -run TestKubernetesHelloWorldExample
+ 2089  go get github.com/gruntwork-io/terratest/modules/k8s@v0.46.1
+ 2090  go test -v -run TestKubernetesHelloWorldExample
+ 2091  go -version
+ 2092  go test -v -run TestKubernetesHelloWorldExample
+ 2093* 
+ 2094  go clean
+ 2095  go test -v -run TestKubernetesHelloWorldExample
+ 2096  sude clean cash
+ 2097  sudo clean cash
+ 2098  sudo apt clean
+ 2099  go test -v -run TestKubernetesHelloWorldExample
+ 2100  go mod tidy
+ 2101  go test -v -run TestKubernetesHelloWorldExample
+ 2102  history
+ 2103  ls
+ 2104  cd ..
+ 2105  ls
+ 2106  git clone git@github.com:utrains/Terratest_helm_job_sops_interview.git
+ 2107  ls
+ 2108  cd Terratest_helm_job_sops_interview/
+ 2109  ll
+ 2110  git add --all
+ 2111  git commit -m "work for Job Interview"
+ 2112  git push
+ 2113  history
